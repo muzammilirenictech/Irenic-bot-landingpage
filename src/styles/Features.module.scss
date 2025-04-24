@@ -1,0 +1,115 @@
+// IrenicBotFeatures.module.scss
+
+.features {
+  padding: 4rem 2rem;
+
+  @media (max-width: 768px) {
+    padding: 3rem 1.5rem;
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  gap: 4rem;
+
+  @media (max-width: 768px) {
+    gap: 3rem;
+  }
+}
+
+.featureCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background-image: url("/Features/featuresBg1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardHeader {
+  margin-bottom: 0.4rem;
+}
+
+.cardId {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #a1b5d8;
+  color: #2563eb;
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 0.4rem 0;
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #6b7280;
+  flex-grow: 1;
+}
+
+.whyChoose {
+  padding: 0 2rem;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background-color: #2563eb;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 1.5rem 0;
+
+  @media (max-width: 768px) {
+    font-size: 1.75rem;
+  }
+}
+
+.highlight {
+  color: #2563eb;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4b5563;
+  max-width: 90%;
+
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+}
