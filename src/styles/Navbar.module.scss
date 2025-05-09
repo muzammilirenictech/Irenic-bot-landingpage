@@ -1,0 +1,251 @@
+.header {
+    position: fixed;
+    top: 3%;
+    left: 0;
+    right: 0;
+    height: 70px;
+    z-index: 1000;
+  }
+  
+  .container {
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr auto;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    
+    a {
+      text-decoration: none;
+      color: #333;
+      
+      img {
+        max-height: 40px;
+        width: auto;
+      }
+    }
+  }
+  
+  .nav {
+    display: flex;
+    backdrop-filter: blur(200px);
+    height: 80%;
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5rem;
+    background: rgba(255, 255, 255, 0.1); /* translucent white */
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.009);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .navList {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navItem {
+    margin: 0 15px;
+  }
+  
+  .navLink {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    
+    &:hover {
+      color: #0070f3;
+    }
+  }
+  
+  .ctaContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ctaButton {
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: #ffffff;
+    color: #0070f3;
+    border: none;
+    border-radius: 4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      background-color: #d8d7d7;
+      color: #0050a3;
+    }
+  }
+  
+  .ctaIcon {
+    margin-left: 5px;
+  }
+  
+  .mobileMenuButton {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: #fff;
+  }
+  
+  // Media queries for responsive design
+  @media (max-width: 1400px) {
+    .container {
+      width: 90%;
+    }
+    
+    .nav {
+      width: 450px;
+    }
+    
+    .navItem {
+      margin: 0 12px;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .container {
+      width: 95%;
+      grid-template-columns: 1.5fr 1fr auto;
+    }
+    
+    .nav {
+      width: 400px;
+    }
+    
+    .navItem {
+      margin: 0 10px;
+    }
+    
+    .ctaButton {
+      padding: 15px 18px;
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .container {
+      grid-template-columns: 1fr 1fr auto;
+      gap: 10px;
+    }
+    
+    .nav {
+      width: 350px;
+    }
+    
+    .navLink {
+      font-size: 0.9rem;
+    }
+    
+    .navItem {
+      margin: 0 8px;
+    }
+    
+    .ctaButton {
+      padding: 12px 16px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .mobileMenuButton {
+      display: block;
+      order: 3;
+    }
+    
+    .container {
+      grid-template-columns: 1fr auto auto;
+      gap: 10px;
+    }
+    
+    .nav {
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-100%);
+      width: 90%;
+      max-width: 500px;
+      background-color: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      flex-direction: column;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      height: auto;
+      border-radius: 1rem;
+      
+      &.active {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    
+    .navList {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+    
+    .navItem {
+      margin: 10px 0;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .navLink {
+      display: block;
+      padding: 10px 0;
+      font-size: 1rem;
+    }
+    
+    .ctaContainer {
+      order: 2;
+    }
+    
+    .logo {
+      order: 1;
+    }
+    
+    .ctaButton {
+      padding: 10px 14px;
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      width: 100%;
+      padding: 0 15px;
+    }
+    
+    .ctaButton {
+      display: none;
+    }
+    
+    .logo a img {
+      max-height: 35px;
+    }
+  }
